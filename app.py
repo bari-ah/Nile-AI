@@ -1,7 +1,7 @@
 """
 Nile Navigator — AI-Powered Travel Concierge for Ethiopia
 MVP prototype for AI UniPod Second Cohort application.
-Fully optimized version powered by OpenRouter + Llama 3 Free.
+Fully optimized version powered by Google AI Studio Gemini API.
 """
 
 import json
@@ -9,7 +9,7 @@ import re
 from datetime import datetime
 from pathlib import Path
 import streamlit as st
-from openai import OpenAI
+from google import genai  # Official Google Gen AI SDK
 
 # -----------------------------------------------------------------------------
 # CONFIG
@@ -123,7 +123,7 @@ def _day_theme(items):
     return "Explore Addis"
 
 # -----------------------------------------------------------------------------
-# LIVE AI CHAT ENGINE — OpenRouter JSON-Context Injector
+# LIVE AI CHAT ENGINE — Google AI Studio Natively Integrated
 # -----------------------------------------------------------------------------
 def chat_reply(user_message):
     """Processes open dialogue while injecting your exact attractions.json file contents."""
@@ -131,13 +131,10 @@ def chat_reply(user_message):
         return "⚠️ **Configuration Error**: Missing API Key! Paste `API_KEY` into your Streamlit Cloud Secrets panel."
 
     try:
-        # Correctly pointing to OpenRouter's universal gateway
-        client = OpenAI(
-            base_url="https://openrouter.ai",
-            api_key=st.secrets["API_KEY"].strip()
-        )
+        # Natively connecting using Google AI Studio developer keys
+        client = genai.Client(api_key=st.secrets["API_KEY"].strip())
 
-        # Inject your attractions.json database into the AI context window
+        # Inject your attractions.json database directly into the contextual instruction sheet
         knowledge_base = []
         for item in DATA["attractions"]:
             knowledge_base.append(
@@ -156,18 +153,18 @@ def chat_reply(user_message):
             "respond back to them fluently in that exact language. Default to English otherwise."
         )
 
-        # Querying OpenRouter's permanently free Llama 3 model endpoint
-        completion = client.chat.completions.create(
-            model="meta-llama/llama-3-8b-instruct:free",
-            messages=[
-                {"role": "system", "content": system_instruction},
-                {"role": "user", "content": user_message}
-            ]
+        # Triggering Google's flagship model via the new generate_content protocol
+        response = client.models.generate_content(
+            model="gemini-2.5-flash",
+            contents=user_message,
+            config=genai.types.GenerateContentConfig(
+                system_instruction=system_instruction
+            )
         )
-        return completion.choices.message.content
+        return response.text
 
     except Exception as e:
-        return f"❌ **OpenRouter API Error**: Connection failed. Details: {str(e)}"
+        return f"❌ **Google Gemini API Error**: Connection failed. Details: {str(e)}"
 # -----------------------------------------------------------------------------
 # BOOKING TRANSACTION PROTOCOLS
 # -----------------------------------------------------------------------------
@@ -215,7 +212,7 @@ def calculate_booking(itinerary, hotel_id=None, num_travelers=2, days=3,
     }
 
 # -----------------------------------------------------------------------------
-# USER INTERFACE LAYOUT (UI)
+# USER INTERFACE LAYOUT (UI) — SIDEBAR & CHAT TAB
 # -----------------------------------------------------------------------------
 with st.sidebar:
     st.image("https://flagcdn.com", width=80)
@@ -460,3 +457,4 @@ with tab_book:
 # FOOTER
 st.markdown("---")
 st.caption("Nile Navigator · MVP prototype · Built June 2026 for AI UniPod Second Cohort · Data sourced from public Ethiopian tourism information · Not a real booking platform")
+
