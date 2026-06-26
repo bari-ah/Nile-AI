@@ -1,7 +1,7 @@
 """
 Nile Navigator — AI-Powered Travel Concierge for Ethiopia
 MVP prototype for AI UniPod Second Cohort application.
-Fully optimized version powered by OpenAI GPT-4o-mini.
+Fully optimized version powered by OpenRouter + Llama 3 Free.
 """
 
 import json
@@ -123,16 +123,17 @@ def _day_theme(items):
     return "Explore Addis"
 
 # -----------------------------------------------------------------------------
-# LIVE AI CHAT ENGINE — Official OpenAI Key Endpoint Connect
+# LIVE AI CHAT ENGINE — OpenRouter JSON-Context Injector
 # -----------------------------------------------------------------------------
 def chat_reply(user_message):
-    """Processes open dialogue using an official OpenAI API Key."""
+    """Processes open dialogue while injecting your exact attractions.json file contents."""
     if "API_KEY" not in st.secrets:
         return "⚠️ **Configuration Error**: Missing API Key! Paste `API_KEY` into your Streamlit Cloud Secrets panel."
 
     try:
-        # Connects natively to OpenAI production servers
+        # Correctly pointing to OpenRouter's universal gateway
         client = OpenAI(
+            base_url="https://openrouter.ai",
             api_key=st.secrets["API_KEY"].strip()
         )
 
@@ -155,9 +156,9 @@ def chat_reply(user_message):
             "respond back to them fluently in that exact language. Default to English otherwise."
         )
 
-        # Triggers production GPT-4o-mini model
+        # Querying OpenRouter's permanently free Llama 3 model endpoint
         completion = client.chat.completions.create(
-            model="gpt-4o-mini",
+            model="meta-llama/llama-3-8b-instruct:free",
             messages=[
                 {"role": "system", "content": system_instruction},
                 {"role": "user", "content": user_message}
@@ -166,7 +167,7 @@ def chat_reply(user_message):
         return completion.choices.message.content
 
     except Exception as e:
-        return f"❌ **OpenAI API Error**: Connection failed. Details: {str(e)}"
+        return f"❌ **OpenRouter API Error**: Connection failed. Details: {str(e)}"
 # -----------------------------------------------------------------------------
 # BOOKING TRANSACTION PROTOCOLS
 # -----------------------------------------------------------------------------
@@ -214,7 +215,7 @@ def calculate_booking(itinerary, hotel_id=None, num_travelers=2, days=3,
     }
 
 # -----------------------------------------------------------------------------
-# APPLICATION GRAPHICAL INTERFACE (UI)
+# USER INTERFACE LAYOUT (UI)
 # -----------------------------------------------------------------------------
 with st.sidebar:
     st.image("https://flagcdn.com", width=80)
