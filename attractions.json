@@ -1,0 +1,949 @@
+{
+
+  "city": "Addis Ababa",
+
+  "country": "Ethiopia",
+
+  "currency": "ETB",
+
+  "exchange_rate_ETB_to_USD": 57.0,
+
+  "last_updated": "2026-06-26",
+
+  "attractions": [
+
+    {
+
+      "id": "holy_trinity",
+
+      "name": "Holy Trinity Cathedral",
+
+      "type": "religious",
+
+      "subtypes": ["orthodox", "historical", "architecture"],
+
+      "description": "The largest Orthodox cathedral in Ethiopia, built to commemorate liberation from Italian occupation. Houses the tombs of Emperor Haile Selassie and Empress Menen. Stunning stained glass and traditional Ethiopian Orthodox architecture. Modest dress required.",
+
+      "area": "Arat Kilo",
+
+      "duration_hours": 1.5,
+
+      "entry_fee_etb": 200,
+
+      "best_time": "morning",
+
+      "tags": ["religious", "orthodox", "family-friendly", "architecture", "historical", "indoor"],
+
+      "rating": 4.6,
+
+      "guide_required": false
+
+    },
+
+    {
+
+      "id": "national_museum",
+
+      "name": "National Museum of Ethiopia",
+
+      "type": "museum",
+
+      "subtypes": ["history", "archaeology"],
+
+      "description": "Home of 'Lucy' (Dinkinesh), the 3.2 million-year-old Australopithecus afarensis fossil. Comprehensive exhibits on Ethiopian history from prehistoric to modern. Essential for understanding the country's deep human heritage.",
+
+      "area": "Arat Kilo",
+
+      "duration_hours": 2.0,
+
+      "entry_fee_etb": 100,
+
+      "best_time": "morning",
+
+      "tags": ["museum", "history", "family-friendly", "indoor", "educational"],
+
+      "rating": 4.4,
+
+      "guide_required": false
+
+    },
+
+    {
+
+      "id": "ethnological_museum",
+
+      "name": "Ethnological Museum",
+
+      "type": "museum",
+
+      "subtypes": ["culture", "anthropology"],
+
+      "description": "Located in the former palace of Emperor Haile Selassie at Addis Ababa University. Excellent exhibits on Ethiopian cultures, music, crafts, and religious traditions across the country's 80+ ethnic groups.",
+
+      "area": "Sidist Kilo",
+
+      "duration_hours": 1.5,
+
+      "entry_fee_etb": 75,
+
+      "best_time": "afternoon",
+
+      "tags": ["museum", "culture", "educational", "indoor"],
+
+      "rating": 4.3,
+
+      "guide_required": false
+
+    },
+
+    {
+
+      "id": "entoto_park",
+
+      "name": "Entoto Park & Entoto Maryam Church",
+
+      "type": "nature",
+
+      "subtypes": ["viewpoint", "religious", "historical"],
+
+      "description": "Mountain ridge at 3,200m altitude overlooking Addis. The park has walking trails, eucalyptus forest, and the historic Entoto Maryam Church (built 1881 by Emperor Menelik II). Panoramic views of the entire city.",
+
+      "area": "Entoto",
+
+      "duration_hours": 3.0,
+
+      "entry_fee_etb": 100,
+
+      "best_time": "morning",
+
+      "tags": ["nature", "viewpoint", "religious", "family-friendly", "outdoor", "hiking"],
+
+      "rating": 4.5,
+
+      "guide_required": false
+
+    },
+
+    {
+
+      "id": "merkato",
+
+      "name": "Merkato",
+
+      "type": "market",
+
+      "subtypes": ["shopping", "cultural"],
+
+      "description": "The largest open-air market in Africa. Sprawling labyrinth of stalls selling everything from spices, coffee, and tej (honey wine) to electronics, textiles, and traditional crafts. A genuine slice of Ethiopian commercial life. Go with a guide.",
+
+      "area": "Merkato",
+
+      "duration_hours": 2.5,
+
+      "entry_fee_etb": 0,
+
+      "best_time": "morning",
+
+      "tags": ["market", "shopping", "cultural", "guide-recommended", "outdoor"],
+
+      "rating": 4.2,
+
+      "guide_required": true
+
+    },
+
+    {
+
+      "id": "red_terror",
+
+      "name": "Red Terror Martyrs Memorial Museum",
+
+      "type": "museum",
+
+      "subtypes": ["history", "memorial"],
+
+      "description": "Memorial to victims of the Derg regime (1974-1991). Powerful, sober exhibits documenting the Ethiopian civil conflict. A difficult but important visit to understand modern Ethiopia.",
+
+      "area": "Meskel Square",
+
+      "duration_hours": 1.5,
+
+      "entry_fee_etb": 50,
+
+      "best_time": "afternoon",
+
+      "tags": ["museum", "history", "memorial", "indoor", "educational"],
+
+      "rating": 4.4,
+
+      "guide_required": false
+
+    },
+
+    {
+
+      "id": "st_georges",
+
+      "name": "St. George's Cathedral",
+
+      "type": "religious",
+
+      "subtypes": ["orthodox", "historical", "architecture"],
+
+      "description": "Octagonal-shaped cathedral built in 1896 to commemorate the victory at the Battle of Adwa. Beautiful stained glass, traditional Ethiopian Orthodox architecture, and a museum with coronation-era artifacts.",
+
+      "area": "Piazza",
+
+      "duration_hours": 1.0,
+
+      "entry_fee_etb": 150,
+
+      "best_time": "morning",
+
+      "tags": ["religious", "orthodox", "architecture", "historical"],
+
+      "rating": 4.4,
+
+      "guide_required": false
+
+    },
+
+    {
+
+      "id": "unity_park",
+
+      "name": "Unity Park",
+
+      "type": "nature",
+
+      "subtypes": ["zoo", "garden", "historical"],
+
+      "description": "Newly opened (2019) park on the National Palace grounds. Features endemic Ethiopian wildlife (lions, zebras, monkeys), botanical gardens, a lake, and historical exhibits. Modern, well-maintained, family-friendly.",
+
+      "area": "National Palace",
+
+      "duration_hours": 2.5,
+
+      "entry_fee_etb": 300,
+
+      "best_time": "afternoon",
+
+      "tags": ["nature", "family-friendly", "zoo", "outdoor", "garden"],
+
+      "rating": 4.5,
+
+      "guide_required": false
+
+    },
+
+    {
+
+      "id": "yod_abyssinia",
+
+      "name": "Yod Abyssinia Cultural Restaurant",
+
+      "type": "food",
+
+      "subtypes": ["cultural", "music", "traditional"],
+
+      "description": "Ethiopia's most famous cultural restaurant. Traditional cuisine (vegetarian and meat platters), live music and dance performances from different regions. A must for first-time visitors. Dinner with show: ~2 hours.",
+
+      "area": "Bole",
+
+      "duration_hours": 2.0,
+
+      "entry_fee_etb": 800,
+
+      "best_time": "evening",
+
+      "tags": ["food", "cultural", "music", "family-friendly", "vegetarian-options"],
+
+      "rating": 4.7,
+
+      "guide_required": false
+
+    },
+
+    {
+
+      "id": "tomoca",
+
+      "name": "Tomoca Coffee",
+
+      "type": "food",
+
+      "subtypes": ["coffee", "traditional"],
+
+      "description": "Iconic Addis coffee roaster founded 1957. Authentic Ethiopian coffee ceremony experience — beans roasted, ground, and brewed in front of you. Espresso bar for the uninitiated. Cheap, no-frills, legendary.",
+
+      "area": "Piazza",
+
+      "duration_hours": 0.75,
+
+      "entry_fee_etb": 100,
+
+      "best_time": "any",
+
+      "tags": ["coffee", "food", "traditional", "cheap", "vegetarian"],
+
+      "rating": 4.8,
+
+      "guide_required": false
+
+    },
+
+    {
+
+      "id": "shiro_meda",
+
+      "name": "Shiro Meda Market",
+
+      "type": "market",
+
+      "subtypes": ["shopping", "traditional"],
+
+      "description": "Famous cloth and traditional garment market. The best place to buy a traditional Ethiopian white cotton shawl (netela), habesha kemis (dress), or embroidered items. Sundays are busiest.",
+
+      "area": "Piazza",
+
+      "duration_hours": 1.5,
+
+      "entry_fee_etb": 0,
+
+      "best_time": "morning",
+
+      "tags": ["market", "shopping", "traditional", "outdoor"],
+
+      "rating": 4.1,
+
+      "guide_required": false
+
+    },
+
+    {
+
+      "id": "au_headquarters",
+
+      "name": "African Union Headquarters (Conference Center)",
+
+      "type": "landmark",
+
+      "subtypes": ["architecture", "political"],
+
+      "description": "Iconic AU Conference Center, built by China and gifted to the African Union in 2012. Tour the grounds and learn about continental governance. Photogenic modern architecture.",
+
+      "area": "Bole",
+
+      "duration_hours": 1.5,
+
+      "entry_fee_etb": 200,
+
+      "best_time": "morning",
+
+      "tags": ["landmark", "architecture", "family-friendly"],
+
+      "rating": 4.2,
+
+      "guide_required": true
+
+    },
+
+    {
+
+      "id": "menelik_mausoleum",
+
+      "name": "Menelik II Mausoleum",
+
+      "type": "religious",
+
+      "subtypes": ["historical"],
+
+      "description": "Final resting place of Emperor Menelik II, who founded Addis Ababa in 1886 and defeated Italian forces at the Battle of Adwa (1896). Located on Holy Trinity Cathedral grounds.",
+
+      "area": "Arat Kilo",
+
+      "duration_hours": 0.5,
+
+      "entry_fee_etb": 100,
+
+      "best_time": "morning",
+
+      "tags": ["religious", "historical", "orthodox"],
+
+      "rating": 4.0,
+
+      "guide_required": false
+
+    },
+
+    {
+
+      "id": "addis_ababa_museum",
+
+      "name": "Addis Ababa City Museum",
+
+      "type": "museum",
+
+      "subtypes": ["history", "city"],
+
+      "description": "Located in a beautiful 1900s mansion. Chronicles the founding and growth of Addis Ababa from 1886 to today. Small but informative — a great introduction to the city's history.",
+
+      "area": "Meskel Square",
+
+      "duration_hours": 1.0,
+
+      "entry_fee_etb": 50,
+
+      "best_time": "afternoon",
+
+      "tags": ["museum", "history", "indoor"],
+
+      "rating": 4.0,
+
+      "guide_required": false
+
+    },
+
+    {
+
+      "id": "bishoftu_lakes",
+
+      "name": "Bishoftu (Debre Zeit) Crater Lakes",
+
+      "type": "nature",
+
+      "subtypes": ["day-trip", "lakes"],
+
+      "description": "A chain of four volcanic crater lakes, ~50km southeast of Addis. Popular day trip for relaxation, swimming, and lakeside dining at Kuriftu Resort. Beautiful at sunset. Half-day or full-day option.",
+
+      "area": "Bishoftu (50km from Addis)",
+
+      "duration_hours": 6.0,
+
+      "entry_fee_etb": 0,
+
+      "best_time": "any",
+
+      "tags": ["nature", "day-trip", "lakes", "family-friendly", "outdoor"],
+
+      "rating": 4.6,
+
+      "guide_required": true
+
+    },
+
+    {
+
+      "id": "adadi_mariam",
+
+      "name": "Adadi Mariam Rock-Hewn Church",
+
+      "type": "religious",
+
+      "subtypes": ["historical", "architecture"],
+
+      "description": "Less famous than Lalibela but architecturally similar — a rock-hewn church carved in the 12th century. ~3 hours from Addis, often combined with the Melka Kunture prehistoric site. Active worship site.",
+
+      "area": "Adadi (130km from Addis)",
+
+      "duration_hours": 5.0,
+
+      "entry_fee_etb": 200,
+
+      "best_time": "morning",
+
+      "tags": ["religious", "historical", "day-trip", "orthodox"],
+
+      "rating": 4.3,
+
+      "guide_required": true
+
+    },
+
+    {
+
+      "id": "edna_mall",
+
+      "name": "Edna Mall",
+
+      "type": "shopping",
+
+      "subtypes": ["modern", "food-court"],
+
+      "description": "Addis's largest modern shopping mall. International brands, supermarket, cinema, food court with Ethiopian and international options. Air-conditioned, modern, family-friendly escape from the bustle.",
+
+      "area": "Bole",
+
+      "duration_hours": 2.0,
+
+      "entry_fee_etb": 0,
+
+      "best_time": "any",
+
+      "tags": ["shopping", "modern", "family-friendly", "indoor", "food"],
+
+      "rating": 4.1,
+
+      "guide_required": false
+
+    },
+
+    {
+
+      "id": "french_church",
+
+      "name": "French Catholic Church",
+
+      "type": "religious",
+
+      "subtypes": ["historical", "architecture"],
+
+      "description": "Built in 1898 by French Capuchin missionaries on Entoto Hill. Modest but historically significant. Pair with Entoto Park visit.",
+
+      "area": "Entoto",
+
+      "duration_hours": 0.5,
+
+      "entry_fee_etb": 0,
+
+      "best_time": "morning",
+
+      "tags": ["religious", "historical", "architecture"],
+
+      "rating": 3.8,
+
+      "guide_required": false
+
+    },
+
+    {
+
+      "id": "mena_house",
+
+      "name": "Ghion Hotel & Historical Sites",
+
+      "type": "landmark",
+
+      "subtypes": ["historical"],
+
+      "description": "Ghion Hotel, founded 1937, hosted Emperor Haile Selassie and many African leaders. The surrounding compound has historical significance. Try the traditional coffee ceremony at the lobby.",
+
+      "area": "Ras Hotel area",
+
+      "duration_hours": 1.0,
+
+      "entry_fee_etb": 0,
+
+      "best_time": "afternoon",
+
+      "tags": ["landmark", "historical"],
+
+      "rating": 3.9,
+
+      "guide_required": false
+
+    },
+
+    {
+
+      "id": "coffee_ceremony_home",
+
+      "name": "Private Coffee Ceremony in a Local Home",
+
+      "type": "experience",
+
+      "subtypes": ["cultural", "coffee", "authentic"],
+
+      "description": "Be hosted by an Ethiopian family for a traditional coffee ceremony — green beans roasted over charcoal, ground by hand, brewed in a jebena. Three rounds (Abol, Tona, Baraka) served with popcorn or bread. Unforgettable cultural immersion.",
+
+      "area": "Various (we arrange)",
+
+      "duration_hours": 1.5,
+
+      "entry_fee_etb": 1500,
+
+      "best_time": "afternoon",
+
+      "tags": ["experience", "cultural", "coffee", "authentic", "vegetarian"],
+
+      "rating": 4.9,
+
+      "guide_required": false
+
+    },
+
+    {
+
+      "id": "lalibela_day",
+
+      "name": "Lalibela Rock-Hewn Churches (Day Trip by Air)",
+
+      "type": "religious",
+
+      "subtypes": ["historical", "day-trip", "unesco"],
+
+      "description": "UNESCO World Heritage site — 11 rock-hewn churches carved in the 12th-13th centuries. Ethiopia's most iconic pilgrimage destination. 1-hour flight from Addis + full-day tour. Recommended for trips of 2+ days.",
+
+      "area": "Lalibela (1hr flight)",
+
+      "duration_hours": 14.0,
+
+      "entry_fee_etb": 2500,
+
+      "best_time": "any",
+
+      "tags": ["religious", "historical", "day-trip", "unesco", "orthodox", "pilgrimage"],
+
+      "rating": 4.9,
+
+      "guide_required": true
+
+    }
+
+  ],
+
+  "hotels": [
+
+    {
+
+      "id": "sheraton",
+
+      "name": "Sheraton Addis",
+
+      "area": "Bole",
+
+      "price_per_night_usd": 220,
+
+      "stars": 5,
+
+      "family_friendly": true,
+
+      "amenities": ["pool", "spa", "multiple restaurants", "gym", "wifi"],
+
+      "rating": 4.6
+
+    },
+
+    {
+
+      "id": "hilton",
+
+      "name": "Hilton Addis Ababa",
+
+      "area": "Bole",
+
+      "price_per_night_usd": 180,
+
+      "stars": 5,
+
+      "family_friendly": true,
+
+      "amenities": ["pool", "spa", "restaurant", "gym", "wifi", "business center"],
+
+      "rating": 4.5
+
+    },
+
+    {
+
+      "id": "hyatt",
+
+      "name": "Hyatt Regency Addis Ababa",
+
+      "area": "Meskel Square",
+
+      "price_per_night_usd": 200,
+
+      "stars": 5,
+
+      "family_friendly": true,
+
+      "amenities": ["pool", "spa", "restaurant", "gym", "wifi"],
+
+      "rating": 4.6
+
+    },
+
+    {
+
+      "id": "radisson",
+
+      "name": "Radisson Blu Hotel, Addis Ababa",
+
+      "area": "Kazanchis",
+
+      "price_per_night_usd": 160,
+
+      "stars": 5,
+
+      "family_friendly": true,
+
+      "amenities": ["pool", "spa", "restaurant", "gym", "wifi"],
+
+      "rating": 4.4
+
+    },
+
+    {
+
+      "id": "elilly",
+
+      "name": "Elilly International Hotel",
+
+      "area": "Bole",
+
+      "price_per_night_usd": 110,
+
+      "stars": 4,
+
+      "family_friendly": true,
+
+      "amenities": ["restaurant", "gym", "wifi", "rooftop"],
+
+      "rating": 4.3
+
+    },
+
+    {
+
+      "id": "jupiter",
+
+      "name": "Jupiter International Hotel",
+
+      "area": "Bole",
+
+      "price_per_night_usd": 90,
+
+      "stars": 4,
+
+      "family_friendly": true,
+
+      "amenities": ["restaurant", "wifi", "spa"],
+
+      "rating": 4.2
+
+    }
+
+  ],
+
+  "car_rentals": [
+
+    {
+
+      "id": "avis_et",
+
+      "name": "Avis Ethiopia",
+
+      "type": "international",
+
+      "fleet": ["compact", "sedan", "suv", "luxury"],
+
+      "has_driver_option": true,
+
+      "airport_pickup": true,
+
+      "price_per_day_etb": {
+
+        "compact": 2200,
+
+        "sedan": 3500,
+
+        "suv": 6500,
+
+        "luxury": 12000
+
+      },
+
+      "price_per_day_with_driver_etb": {
+
+        "compact": 4500,
+
+        "sedan": 6000,
+
+        "suv": 9000,
+
+        "luxury": 15000
+
+      },
+
+      "airport_transfer_etb": 1500,
+
+      "locations": ["Bole Airport", "Downtown", "Hotel delivery"],
+
+      "insurance_included": true,
+
+      "rating": 4.5
+
+    },
+
+    {
+
+      "id": "hertz_et",
+
+      "name": "Hertz Ethiopia",
+
+      "type": "international",
+
+      "fleet": ["compact", "sedan", "suv"],
+
+      "has_driver_option": true,
+
+      "airport_pickup": true,
+
+      "price_per_day_etb": {
+
+        "compact": 2000,
+
+        "sedan": 3300,
+
+        "suv": 6000
+
+      },
+
+      "price_per_day_with_driver_etb": {
+
+        "compact": 4200,
+
+        "sedan": 5800,
+
+        "suv": 8500
+
+      },
+
+      "airport_transfer_etb": 1400,
+
+      "locations": ["Bole Airport", "Bole Branch", "Meskel Square"],
+
+      "insurance_included": true,
+
+      "rating": 4.4
+
+    },
+
+    {
+
+      "id": "ethio_rental",
+
+      "name": "Ethio Car Rental",
+
+      "type": "local",
+
+      "fleet": ["compact", "sedan", "suv", "van"],
+
+      "has_driver_option": true,
+
+      "airport_pickup": true,
+
+      "price_per_day_etb": {
+
+        "compact": 1800,
+
+        "sedan": 3000,
+
+        "suv": 5500,
+
+        "van": 7500
+
+      },
+
+      "price_per_day_with_driver_etb": {
+
+        "compact": 4000,
+
+        "sedan": 5500,
+
+        "suv": 8000,
+
+        "van": 10000
+
+      },
+
+      "airport_transfer_etb": 1200,
+
+      "locations": ["Bole Airport", "Bole Road", "4 Kilo"],
+
+      "insurance_included": true,
+
+      "rating": 4.3
+
+    },
+
+    {
+
+      "id": "addis_rent",
+
+      "name": "Addis Rent a Car",
+
+      "type": "local",
+
+      "fleet": ["compact", "sedan", "suv"],
+
+      "has_driver_option": true,
+
+      "airport_pickup": true,
+
+      "price_per_day_etb": {
+
+        "compact": 1500,
+
+        "sedan": 2800,
+
+        "suv": 5000
+
+      },
+
+      "price_per_day_with_driver_etb": {
+
+        "compact": 3500,
+
+        "sedan": 5000,
+
+        "suv": 7500
+
+      },
+
+      "airport_transfer_etb": 1000,
+
+      "locations": ["Bole Airport", "CMC", "Sarbet"],
+
+      "insurance_included": false,
+
+      "rating": 4.1
+
+    },
+
+    {
+
+      "id": "feres_ride",
+
+      "name": "Feres / Ride (ride-hailing)",
+
+      "type": "ride_hailing",
+
+      "fleet": ["economy", "comfort", "xl"],
+
+      "has_driver_option": true,
+
+      "airport_pickup": true,
+
+      "price_per_day_etb": null,
+
+      "price_per_day_with_driver_etb": null,
+
+      "airport_transfer_etb": 800,
+
+      "average_ride_etb": 350,
+
+      "locations": ["Citywide via app"],
+
+      "insurance_included": true,
+
+      "rating": 4.0,
+
+      "note": "On-demand ride-hailing. Pay per ride, no daily commitment. Best for city-only trips."
+
+    }
+
+  ]
+
+}
