@@ -1,7 +1,7 @@
 """
 Nile Navigator — AI-Powered Travel Concierge for Ethiopia
 MVP prototype for AI UniPod Second Cohort application.
-Fully production-optimized version using Llama 3 AI.
+Fully optimized version powered by OpenAI GPT-4o-mini.
 """
 
 import json
@@ -44,30 +44,24 @@ def score_attraction(attraction, prefs):
     score = 0.0
     tags = set(attraction["tags"])
 
-    # Interest matching (highest priority weight)
     if prefs.get("interests"):
         overlap = tags & prefs["interests"]
         score += len(overlap) * 10.0
 
-    # Family-friendly hard filtering rules
     if prefs.get("family_friendly") and "family-friendly" not in tags:
         return -1  
 
-    # Maximum duration capacity limit constraints
     duration_max = prefs.get("duration_max")
     if duration_max is not None and attraction["duration_hours"] > duration_max:
         score -= 5.0
 
-    # Guided tour requirement enforcement rules
     if not prefs.get("guide_ok", True) and attraction.get("guide_required"):
         return -1  
 
-    # Budget caps
     budget = prefs.get("budget_etb_max")
     if budget is not None and attraction["entry_fee_etb"] > budget:
         score -= 3.0
 
-    # Popularity rating weight factor balance
     score += attraction["rating"]
     return score
 
@@ -129,24 +123,24 @@ def _day_theme(items):
     return "Explore Addis"
 
 # -----------------------------------------------------------------------------
-# LIVE AI CHAT ENGINE — Secure OpenRouter JSON-Context Injector
+# LIVE AI CHAT ENGINE — Official OpenAI Key Endpoint Connect
 # -----------------------------------------------------------------------------
 def chat_reply(user_message):
-    """Processes open dialogue while injecting your exact attractions.json file contents."""
+    """Processes open dialogue using an official OpenAI API Key."""
     if "API_KEY" not in st.secrets:
         return "⚠️ **Configuration Error**: Missing API Key! Paste `API_KEY` into your Streamlit Cloud Secrets panel."
 
     try:
+        # Connects natively to OpenAI production servers
         client = OpenAI(
-            base_url="https://openrouter.ai",
-            api_key=st.secrets["API_KEY"]
+            api_key=st.secrets["API_KEY"].strip()
         )
 
-        # Inject your attractions.json database into the AI's active context window
+        # Inject your attractions.json database into the AI context window
         knowledge_base = []
         for item in DATA["attractions"]:
             knowledge_base.append(
-                f"- ID: {item['id']} | Name: {item['name']} | Area: {item['area']} | "
+                f"- Landmark: {item['name']} | Area: {item['area']} | "
                 f"Fee: {item['entry_fee_etb']} ETB | Rating: {item['rating']}/5 | "
                 f"Desc: {item['description']}"
             )
@@ -161,8 +155,9 @@ def chat_reply(user_message):
             "respond back to them fluently in that exact language. Default to English otherwise."
         )
 
+        # Triggers production GPT-4o-mini model
         completion = client.chat.completions.create(
-            model="meta-llama/llama-3-8b-instruct:free",
+            model="gpt-4o-mini",
             messages=[
                 {"role": "system", "content": system_instruction},
                 {"role": "user", "content": user_message}
@@ -171,7 +166,7 @@ def chat_reply(user_message):
         return completion.choices.message.content
 
     except Exception as e:
-        return f"❌ **AI Token Error**: Unable to get response context. Details: {str(e)}"
+        return f"❌ **OpenAI API Error**: Connection failed. Details: {str(e)}"
 # -----------------------------------------------------------------------------
 # BOOKING TRANSACTION PROTOCOLS
 # -----------------------------------------------------------------------------
@@ -458,7 +453,7 @@ with tab_book:
             - Travelers: {travelers}
             - Payment: {payment}
             - Total: {booking['total_etb']:,} ETB (${booking['total_usd']}){car_msg}
-            - A licensed guide will meet you at on Day 1.
+            - A licensed guide will meet you on Day 1.
             """)
 
 # FOOTER
